@@ -1,8 +1,7 @@
-let character = 'Hello';
-let count = 8;
-let rows = ["Naomi", "Quincy", "CamperChan"];
-rows.push("freeCodeCamp");
-console.log(rows);
-let popped;
-rows.pop(popped)
-console.log(popped)
+const character = "#";
+const count = 8;
+const rows = [];
+
+for ("iterator"; "condition"; "iteration") {
+
+}
