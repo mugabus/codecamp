@@ -17,3 +17,4 @@ for (const row of rows) {
 }
 
 console.log(result);
+
