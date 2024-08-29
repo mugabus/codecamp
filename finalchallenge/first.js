@@ -2,15 +2,9 @@ const character = "#";
 const count = 8;
 const rows = [];
 
-function padRow(name) {
-  const test = "Testing";
-  
-  return test;
+function padRow() {
 
 }
-
-const call = padRow("CamperChan");
-console.log(call);
 
 
 for (let i = 0; i < count; i = i + 1) {
