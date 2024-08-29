@@ -2,9 +2,11 @@ const character = "#";
 const count = 8;
 const rows = [];
 
-
 function padRow(name) {
-  return name +character;
+  const test = "Testing";
+  
+  return test;
+
 }
 
 const call = padRow("CamperChan");
