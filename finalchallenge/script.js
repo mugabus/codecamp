@@ -152,6 +152,7 @@ function fightDragon() {
 }
 
 function goFight() {
+  update(locations[3]);
 
 }
 
