@@ -27,4 +27,5 @@ const darkColorsArr = [
   }
   const btn = document.querySelector("#btn");
   
-  btn.onclick = changeBackgroundColor();
+  btn.onclick = changeBackgroundColor;
+  
