@@ -52,8 +52,24 @@ function getRandomComputerResult() {
   
   };
   function resetGame() {
+    // Reset player and computer scores
+    playerScore = 0;
+    computerScore = 0;
   
-  };
+    // Update score display elements
+    playerScoreSpanElement.innerText = playerScore;
+    computerScoreSpanElement.innerText = computerScore;
+  
+    // Hide reset button
+    resetGameBtn.style.display = "none";
+  
+    // Show options container for playing again
+    optionsContainer.style.display = "block";
+  
+    // Clear winner and round result messages
+    winnerMsgElement.innerText = "";
+    roundResultsMsg.innerText = "";
+  }
   
   resetGameBtn.addEventListener("click", resetGame);
   
