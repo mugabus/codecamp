@@ -194,7 +194,7 @@ const setPlayerCards = (arr = players) => {
         </div>
       `;
     }
-  );
+  ).join("");
 
 
 };
