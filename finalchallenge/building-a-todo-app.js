@@ -39,5 +39,10 @@ taskForm.addEventListener("submit", (e) => {
     date: dateInput.value,
     description: descriptionInput.value,
   };
-  console.log(taskObj);
+
+  if (dataArrIndex === -1) {
+    taskData.unshift(taskObj);
+  }
+
+  
 });
