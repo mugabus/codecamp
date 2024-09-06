@@ -13,6 +13,22 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
+const addOrUpdateTask = () => {
+  const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+  const taskObj = {
+    id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+    title: titleInput.value,
+    date: dateInput.value,
+    description: descriptionInput.value,
+  };
+
+  if (dataArrIndex === -1) {
+    taskData.unshift(taskObj);
+  }
+};
+
+
+
 const reset = () => {
   titleInput.value = "";
   dateInput.value = "";
@@ -27,9 +43,9 @@ openTaskFormBtn.addEventListener("click", () =>
 
 closeTaskFormBtn.addEventListener("click", () => {
   const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
-if(formInputsContainValues){  
-  confirmCloseDialog.showModal();
-  }else{
+  if (formInputsContainValues) {
+    confirmCloseDialog.showModal();
+  } else {
     reset();
   }
 });
@@ -44,19 +60,7 @@ discardBtn.addEventListener("click", () => {
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
-  const taskObj = {
-    id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
-    title: titleInput.value,
-    date: dateInput.value,
-    description: descriptionInput.value,
-  };
-
-   if (dataArrIndex === -1) {
-    taskData.unshift(taskObj);
-  }
-
- taskData.forEach(
+  taskData.forEach(
     ({ id, title, date, description }) => {
         tasksContainer.innerHTML += `
         <div class="task" id="${id}">
