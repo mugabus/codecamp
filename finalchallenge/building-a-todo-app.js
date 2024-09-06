@@ -27,15 +27,15 @@ openTaskFormBtn.addEventListener("click", () =>
 
 closeTaskFormBtn.addEventListener("click", () => {
   confirmCloseDialog.showModal();
+  const formInputsContainValues=titleInput.value || dateInput.value || descriptionInput.value;
 });
 
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 
 discardBtn.addEventListener("click", () => {
   confirmCloseDialog.close();
-  taskForm.classList.toggle("hidden");
+  reset()
 });
-
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -52,7 +52,7 @@ taskForm.addEventListener("submit", (e) => {
     taskData.unshift(taskObj);
   }
 
-  taskData.forEach(
+ taskData.forEach(
     ({ id, title, date, description }) => {
         tasksContainer.innerHTML += `
         <div class="task" id="${id}">
@@ -63,8 +63,8 @@ taskForm.addEventListener("submit", (e) => {
           <button type="button" class="btn">Delete</button>
         </div>
       `
-    }   
+    }
   );
 
-  taskForm.classList.reset();
+  reset()
 });
