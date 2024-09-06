@@ -7,11 +7,21 @@ const decimalToBinary = (input) => {
   const quotients = [];
   const remainders = [];
 
-  input = 0;
+  while (input > 0) {
+    const quotient = Math.floor(input / 2);
+    const remainder = input % 2;
 
-  while(input >0){
-
+    inputs.push(input);
+    quotients.push(quotient);
+    remainders.push(remainder);
+    input = quotient;
   }
+
+  console.log("Inputs: ", inputs);
+  console.log("Quotients: ", quotients);
+  console.log("Remainders: ", remainders);
+
+  
 };
 
 const checkUserInput = () => {
