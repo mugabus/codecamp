@@ -3,15 +3,11 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-  let binary="";
-  result.innerText=binary;
+  if (input === 0) {
+    return "";
+  } else {
+    return decimalToBinary(Math.floor(input / 2));
   }
-
-  console.log("Inputs: ", inputs);
-  console.log("Quotients: ", quotients);
-  console.log("Remainders: ", remainders);
-
-  result.innerText = remainders.reverse().join("");
 };
 
 const checkUserInput = () => {
