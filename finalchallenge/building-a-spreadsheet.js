@@ -9,5 +9,12 @@ window.onload = () => {
     label.textContent = name;
     container.appendChild(label);
   }
-const letters=charRange("A","J")
+  const letters = charRange("A", "J");
+  letters.forEach(createLabel);
+  range(1, 99).forEach(number => {
+    createLabel(number);
+    letters.forEach(letter => {
+
+    })
+  })
 }
