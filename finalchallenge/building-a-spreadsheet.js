@@ -33,6 +33,7 @@ const spreadsheetFunctions = {
 }
 
 const applyFunction = str => {
+  const noHigh = highPrecedence(str);
 
 }
 
