@@ -31,6 +31,8 @@ const spreadsheetFunctions = {
   average,
   median,
   even: nums => nums.filter(isEven),
+  lasttwo: nums => nums.slice(-2),
+
 }
 
 const applyFunction = str => {
