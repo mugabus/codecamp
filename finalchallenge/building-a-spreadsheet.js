@@ -33,7 +33,7 @@ const spreadsheetFunctions = {
   even: nums => nums.filter(isEven),
   firsttwo: nums => nums.slice(0, 2),
   lasttwo: nums => nums.slice(-2),
-
+  increment:nums => nums.map(num => num + 1),
 }
 
 const applyFunction = str => {
