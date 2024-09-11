@@ -32,11 +32,12 @@ const spreadsheetFunctions = {
   median,
   even: nums => nums.filter(isEven),
   someeven: nums => nums.some(isEven),
-
+  everyeven: nums => nums.every(isEven),
   firsttwo: nums => nums.slice(0, 2),
   lasttwo: nums => nums.slice(-2),
   has2: nums => nums.includes(2),
   increment: nums => nums.map(num => num + 1),
+
 }
 
 const applyFunction = str => {
