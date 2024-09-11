@@ -85,3 +85,4 @@ const products = [
   },
 ];
 
+products.forEach(()=>{})
