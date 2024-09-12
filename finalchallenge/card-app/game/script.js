@@ -50,6 +50,26 @@ class Player {
       this.position.x = this.width;
     }
 
-
+    if (this.position.x >= canvas.width - this.width * 2) {
+      this.position.x = canvas.width - this.width * 2;
+    }
   }
 }
+
+const player = new Player();
+
+
+const animate = () => {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+}
+
+
+const startGame = () => {
+  canvas.style.display = "block";
+  startScreen.style.display = "none";
+  player.draw();
+}
+
+startBtn.addEventListener("click", startGame);
