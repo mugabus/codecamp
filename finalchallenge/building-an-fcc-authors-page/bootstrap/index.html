@@ -4,7 +4,7 @@
     color: red;
   }
 
-  h2 text-center{
+  h2 {
     font-family: Lobster, Monospace;
   }
 
@@ -23,29 +23,39 @@
   .smaller-image {
     width: 100px;
   }
-  
+
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
 </style>
-<p class="text-center"></p>
+
 <div class="container-fluid">
-  <h2 class="red-text">CatPhotoApp</h2>
+  <h2 class="red-text text-center">CatPhotoApp</h2>
 
   <p>Click here for <a href="#">cat photos</a>.</p>
 
   <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
 
   <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" class="img-responsive" alt="Three kittens running towards the camera.">
+
+  <!-- Updated Like button with btn-block class -->
+  <button class="btn btn-default btn-block">Like</button>
+
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
     <li>laser pointers</li>
     <li>lasagna</li>
   </ul>
+  
   <p>Top 3 things cats hate:</p>
   <ol>
     <li>flea treatment</li>
     <li>thunder</li>
     <li>other cats</li>
   </ol>
+
   <form action="https://freecatphotoapp.com/submit-cat-photo">
     <label><input type="radio" name="indoor-outdoor"> Indoor</label>
     <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
