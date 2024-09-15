@@ -1,26 +1,18 @@
-class CampSite extends React.Component {
+class StatefulComponent extends React.Component {
     constructor(props) {
       super(props);
+      // Only change code below this line
+      this.state = {
+        firstName: "John" // Replace "John" with your name
+      };
+      // Only change code above this line
     }
     render() {
       return (
         <div>
-          <Camper />
+          <h1>{this.state.firstName}</h1>
         </div>
       );
     }
-  };
-  
-  // Change code below this line
-  const Camper = (props) => {
-    return <p>{props.name}</p>;
-  };
-  
-  Camper.defaultProps = {
-    name: "CamperBot"
-  };
-  
-  Camper.propTypes = {
-    name: PropTypes.string.isRequired
   };
   
