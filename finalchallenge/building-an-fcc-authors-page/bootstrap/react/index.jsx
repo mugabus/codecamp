@@ -2,14 +2,18 @@ class MyComponent extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        name: 'freeCodeCamp'
-      }
+        name: 'Initial State'
+      };
+      this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+      this.setState({name:'React Rocks!'})
     }
     render() {
-      const name=this.state.name
       return (
         <div>
-         <h1>{name}</h1>
+          <button onClick={this.handleClick}>Click Me</button>
+          <h1>{this.state.name}</h1>
         </div>
       );
     }
