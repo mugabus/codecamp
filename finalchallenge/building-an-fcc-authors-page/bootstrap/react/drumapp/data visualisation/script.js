@@ -6,11 +6,12 @@
       .data(dataset)
       .enter()
       .append("h2")
-      .text((d) => (d + " USD"))
-      .style("font-family","verdana");
+      .text((d) => d + " USD")
+      .style("color", (d, i) => {
+        // Apply colors based on the index (i)
+        return (i === 0 || i === 3 || i === 5 || i === 7 || i === 8) ? "red" : "green";
+      });
 
-
-
-      // Add your code above this line
+    // Add your code above this line
   </script>
 </body>
