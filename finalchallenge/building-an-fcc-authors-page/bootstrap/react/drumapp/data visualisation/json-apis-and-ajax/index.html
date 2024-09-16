@@ -1,13 +1,14 @@
 <script>
     document.addEventListener('DOMContentLoaded', function(){
       document.getElementById('getMessage').onclick = function(){
-        fetch('/json/cats.json'
-            .then(Response=>Response.json()
-            .then(data =>{
-                document.getElementById('message').innerHTML=JSON.stringify(data);
-            })
-        )
-        )
+        const req = new XMLHttpRequest();
+        req.open("GET",'/json/cats.json', true);
+        req.send();
+        req.onload=function(){
+          const json = JSON.parse(req.responseText);
+          document.getElementsByClassName('message')[0].innerHTML = JSON.stringify(json);
+         console.log(json[0].altText);
+        };
       };
     });
   </script>
