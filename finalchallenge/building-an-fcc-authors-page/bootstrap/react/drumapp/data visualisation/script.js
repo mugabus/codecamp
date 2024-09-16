@@ -1,9 +1,11 @@
 <body>
+  <ul>
+    <li>Example</li>
+    <li>Example</li>
+    <li>Example</li>
+  </ul>
   <script>
-    // Add your code below this line
-    d3.select("body")
-      .append("h1")
-      .text("Learning D3");
-    // Add your code above this line
+    d3.selectAll("li")
+    .text("list item ")
   </script>
 </body>
