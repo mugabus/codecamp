@@ -6,8 +6,11 @@
       .data(dataset)
       .enter()
       .append("h2")
-      // Add your code below this line
-      .text((d) => d + " USD");
+      .text((d) => (d + " USD"))
+      .style("font-family","verdana");
+
+
+
       // Add your code above this line
   </script>
 </body>
