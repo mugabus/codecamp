@@ -9,3 +9,4 @@ xhr.onreadystatechange = function () {
 };
 const body = JSON.stringify({ userName: userName, suffix: ' loves cats!' });
 xhr.send(body);
+
